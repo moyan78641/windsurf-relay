@@ -54,13 +54,13 @@ jobs:
       - name: Package (Unix)
         if: runner.os != 'Windows'
         run: |
-          cp target/${{ matrix.target }}/release/windsurf-mcp-client ${{ matrix.name }}
+          cp crates/mcp-client/target/${{ matrix.target }}/release/windsurf-mcp-client ${{ matrix.name }}
           tar -czf ${{ matrix.name }}.tar.gz ${{ matrix.name }}
 
       - name: Package (Windows)
         if: runner.os == 'Windows'
         run: |
-          copy target\${{ matrix.target }}\release\windsurf-mcp-client.exe ${{ matrix.name }}.exe
+          copy crates\mcp-client\target\${{ matrix.target }}\release\windsurf-mcp-client.exe ${{ matrix.name }}.exe
           Compress-Archive -Path "${{ matrix.name }}.exe" -DestinationPath "${{ matrix.name }}.zip"
 
       - name: Upload
