@@ -1,0 +1,17 @@
+{
+  "name": "windsurf-relay-cli",
+  "version": "0.1.0",
+  "description": "WindSurf Relay MCP Client — AI-driven semantic code search",
+  "license": "MIT",
+  "bin": {
+    "windsurf-relay": "./bin/run.js"
+  },
+  "scripts": {
+    "postinstall": "node scripts/install.js"
+  },
+  "os": ["darwin", "linux", "win32"],
+  "cpu": ["x64", "arm64"],
+  "engines": {
+    "node": ">=18"
+  }
+}

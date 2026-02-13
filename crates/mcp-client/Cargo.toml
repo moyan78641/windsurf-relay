@@ -1,0 +1,17 @@
+[package]
+name = "windsurf-mcp-client"
+version = "0.1.0"
+edition = "2021"
+description = "Windsurf Relay MCP Client — lightweight stdio MCP server"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", features = ["json", "gzip", "rustls-tls"], default-features = false }
+tokio = { version = "1", features = ["full"] }
+anyhow = "1"
+uuid = { version = "1", features = ["v4"] }
+bytes = "1"
+flate2 = "1"
+base64 = "0.22"
+regex-lite = "0.1"
